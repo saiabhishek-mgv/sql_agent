@@ -9,7 +9,9 @@ from langchain_community.agent_toolkits.sql.base import create_sql_agent, SQLDat
 db = SQLDatabase.from_uri("sqlite:///titanic.db", include_tables=["titanic"])
 
 # Load Llama 3.2 model from Ollama
-llm = OllamaLLM(model="llama3")
+NGROK_URL = "https://32a1-2601-8c-4e80-6780-cc25-ba5d-9069-af61.ngrok-free.app"  # Replace with your actual ngrok link
+
+llm = OllamaLLM(model="llama3", base_url=NGROK_URL)
 
 # Create a SQL toolkit for the agent
 toolkit = SQLDatabaseToolkit(db=db, llm=llm)
