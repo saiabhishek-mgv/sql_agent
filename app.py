@@ -9,7 +9,7 @@ from langchain_community.agent_toolkits.sql.base import create_sql_agent, SQLDat
 db = SQLDatabase.from_uri("sqlite:///titanic.db", include_tables=["titanic"])
 
 # Load Llama 3.2 model from Ollama
-NGROK_URL = "https://45f5-2601-8c-4e80-6780-cc25-ba5d-9069-af61.ngrok-free.app"  # Replace with your actual ngrok link
+NGROK_URL = "https://d9b4-2601-8c-4e80-6780-cc25-ba5d-9069-af61.ngrok-free.app"  # Replace with your actual ngrok link
 
 llm = OllamaLLM(model="llama3", base_url=NGROK_URL)
 
